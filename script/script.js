@@ -12,28 +12,29 @@ const getNum = function(min = 1, max = 100) {
 
 
 let num;
-console.log('Угадай число от 1 до 100');
+alert('Угадай число от 1 до 100');
 
 const guess = function() {
    
-    num = +prompt('Введите число');
-    if (num == 0) {
-        console.log('Игра окончена');
+    num = prompt('Введите число');
+    console.log(num, typeof(num));
+    if (num === null) {
+        alert('Игра окончена');
         return ;
     }
     else if (!isNumber(num)) {
         return  guess();
     }
     else if (num > randomNum) {
-        console.log('Загаданное число меньше');
+        alert('Загаданное число меньше');
         return guess();
     }
     else if (num < randomNum) {
-        console.log('Загаданное число больше');
+        alert('Загаданное число больше');
         return guess();
     }
     else if (num == randomNum) {
-        console.log('Поздравляю, Вы угадали!!!');
+        alert('Поздравляю, Вы угадали!!!');
         return ;
     }
     
