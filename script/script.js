@@ -33,7 +33,7 @@ const guess = function() {
         alert('Загаданное число больше');
         return guess();
     }
-    else if (num == randomNum) {
+    else if (+num === randomNum) {
         alert('Поздравляю, Вы угадали!!!');
         return ;
     }
